@@ -1,5 +1,5 @@
 var req = new HttpRequest();
-var baseUrl = 'https://your_webhook_n8n'; //CHANGE DE AUTH CONFIG, IT'S NOT IMPLEMENTED
+var baseUrl = 'https://your_webhook_n8n'; //CHANGE AUTH CONFIG, IT'S NOT IMPLEMENTED
 
 // Converte o value (string JSON) em objeto
 var data = {};
