@@ -25,80 +25,11 @@ n8n
 v
 PostgreSQL
 
+![Arquitetura](flow.svg)
+
+
+
 ````
-
-<svg width="1200" height="600" viewBox="0 0 1200 600"
-     xmlns="http://www.w3.org/2000/svg"
-     font-family="Arial, Helvetica, sans-serif">
-
-  <!-- Background -->
-  <rect x="0" y="0" width="1200" height="600" fill="#0f172a"/>
-
-  <!-- Zabbix -->
-  <rect x="40" y="240" rx="12" ry="12" width="220" height="120" fill="#b91c1c"/>
-  <text x="150" y="275" fill="#ffffff" font-size="18" text-anchor="middle">Zabbix</text>
-  <text x="150" y="300" fill="#ffffff" font-size="13" text-anchor="middle">
-    Trigger Action
-  </text>
-  <text x="150" y="320" fill="#ffffff" font-size="13" text-anchor="middle">
-    Media Type (Webhook)
-  </text>
-
-  <!-- Arrow Zabbix -> Webhook -->
-  <line x1="260" y1="300" x2="360" y2="300" stroke="#38bdf8" stroke-width="3"/>
-  <polygon points="360,300 350,295 350,305" fill="#38bdf8"/>
-
-  <!-- Webhook -->
-  <rect x="360" y="240" rx="12" ry="12" width="240" height="120" fill="#1d4ed8"/>
-  <text x="480" y="275" fill="#ffffff" font-size="17" text-anchor="middle">
-    n8n Webhook
-  </text>
-  <text x="480" y="300" fill="#ffffff" font-size="13" text-anchor="middle">
-    Recebe Eventos - Zabbix
-  </text>
-  <text x="480" y="320" fill="#ffffff" font-size="12" text-anchor="middle">
-    /webhook/randon-zabbix
-  </text>
-
-  <!-- Arrow Webhook -> Validate -->
-  <line x1="600" y1="300" x2="700" y2="300" stroke="#38bdf8" stroke-width="3"/>
-  <polygon points="700,300 690,295 690,305" fill="#38bdf8"/>
-
-  <!-- Validate Event -->
-  <rect x="700" y="220" rx="12" ry="12" width="260" height="80" fill="#334155"/>
-  <text x="830" y="255" fill="#ffffff" font-size="15" text-anchor="middle">
-    Valida evento existente
-  </text>
-  <text x="830" y="275" fill="#cbd5f5" font-size="12" text-anchor="middle">
-    SELECT eventid FROM zbx_problems
-  </text>
-
-  <!-- IF -->
-  <polygon points="830,320 900,380 830,440 760,380"
-           fill="#0ea5e9"/>
-  <text x="830" y="375" fill="#ffffff" font-size="14" text-anchor="middle">
-    EventID
-  </text>
-  <text x="830" y="395" fill="#ffffff" font-size="14" text-anchor="middle">
-    existe?
-  </text>
-
-  <!-- Yes Arrow -->
-  <line x1="900" y1="380" x2="1020" y2="300" stroke="#22c55e" stroke-width="3"/>
-  <polygon points="1020,300 1010,295 1010,305" fill="#22c55e"/>
-  <text x="955" y="335" fill="#22c55e" font-size="12">SIM</text>
-
-  <!-- No Arrow -->
-  <line x1="760" y1="380" x2="640" y2="480" stroke="#f97316" stroke-width="3"/>
-  <polygon points="640,480 650,475 650,485" fill="#f97316"/>
-  <text x="700" y="430" fill="#f97316" font-size="12">NÃO</text>
-
-  <!-- Update -->
-  <rect x="1020" y="240" rx="12" ry="12" wi
-
-
-
----
 
 ## Pré-requisitos
 
